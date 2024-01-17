@@ -1,19 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import QuoteCache from "./components/QuoteCache";
+import QuoteCard from "./components/QuoteCard";
 
 export default function Home() {
-  const [quote, setQuote] = useState({ content: "Loading..." });
-
-  async function fetchQuote()
-
-  useEffect(() => {
-    setQuote(fetchQuote());
-  }, []);
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>{quote.content}</p>
+    <main className="h-dvh w-dvw">
+      <QuoteCache>
+        <QuoteCard />
+      </QuoteCache>
     </main>
   );
 }
